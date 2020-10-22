@@ -1,0 +1,13 @@
+{% extends "text/layout.html" %}
+
+{% block body %}
+    <h1>Tasks</h1>
+    <ul>
+        {% for tex in text %}
+            <li>{{ tex }}</li>
+        {% empty %}
+            <li>No tasks.</li>
+        {% endfor  %}
+    </ul>
+    <a href="{%url 'text:add' %}">Add a New Task</a>
+{% endblock %}
